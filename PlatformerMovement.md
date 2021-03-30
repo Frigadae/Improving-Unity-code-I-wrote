@@ -66,14 +66,14 @@ if (Input.GetKey("up") && playableObject.velocity.y == 0)
   playableObject.velocity = Vector2.up * speed;
 }
 ```
-While the Youtube tutorials Aimplement raycasting or some form of colliders to check if the player is grounded. I was initially hesitant to implement one myself.
+While the Youtube tutorials implement raycasting or some form of colliders to check if the player is grounded. I was initially hesitant to implement one myself.
 I don't want to copy another person's code immediately. Additionally, I was already satisfied with my platformer movement behaviour, I wanted to relish the moment.
 Acknowledging the flaws of my implementation did begin right away, while a simple vertical velocity check is basic and workable. 
-It does have a flaw that while i did not test did convince me to look into raycasting or colliders.
+It does have a flaw that while I did not test did convince me to look into raycasting or colliders.
 
 
 Suppose the player is on a moving platform, a horizontal one would be no problem. However a vertical moving platform would disable the ability to jump. 
-While this is an problem that is not verified as I did not test it out, it is possible, as a moving platform would push the player around and thus the velocity is never really set to 0.
+While this is a problem that is not verified as I did not test it out, it is possible, as a moving platform would push the player around and thus the velocity is never really set to 0.
 
 And so enter [this video about implementing a simple platformer game](https://www.youtube.com/watch?v=1bHVsxw_o7o)
 
