@@ -22,6 +22,7 @@ public class myFirstScript : MonoBehaviour
 
     playableObject.velocity = new Vector2(xCoord * speed, yCoord * speed) * Time.deltaTime;
   }
+}
 ```
 In this implementation, I researched into Rigid Bodies and Collisions. I can definitely say this is very helpful as using RigidBody2d eliminated the shaking when I press against another solid object.
 It turns out the implementation of the code using RigidBody velocity also reduced the amount of checking I need to do for the keys too. 
@@ -29,19 +30,18 @@ Unity has an input manager which keeps track of the default control keys. I only
 If the float is on the vertical axis and is a negative number, then it is very definitely a down key.
   
 ### Sprite Flipping
-```
-  if (Input.GetKey("left") || Input.GetKey("a"))
-  {
-    playableSprite.flipX = false;
-  }
+```cs
+if (Input.GetKey("left") || Input.GetKey("a"))
+{
+  playableSprite.flipX = false;
+}
   if (Input.GetKey("right") || Input.GetKey("d"))
-  {
-    playableSprite.flipX = true;
-  }
-  if (!Input.anyKey)
-  {
-    playableObject.velocity = Vector2.zero;
-  }
+{
+  playableSprite.flipX = true;
+}
+if (!Input.anyKey)
+{
+  playableObject.velocity = Vector2.zero;
 }
 ```
 A comfort feature I implemented includes sprite flipping if I were to go left or right. 
