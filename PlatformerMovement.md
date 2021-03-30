@@ -1,5 +1,5 @@
 # Implementing Platformer behaviour
-### It takes a bit of work
+### It is more challenging to implement
 ```cs
 public class PlatformerMoveScript : MonoBehaviour
 {
@@ -135,7 +135,7 @@ public class NewPlatformerScript : MonoBehaviour
     }
 }
 ```
-With some simplifying, such as deleting a function call. I was able to achieve the desired platformer behaviour by implementing a collider check using a cirlce overlap.
+With some simplifying, such as deleting a function call. I was able to achieve the desired platformer behaviour by implementing a collider check using a circle overlap.
 The circle overlap checks for a layer named "Ground" which represents the platforms the player can stand on.
 
 Reading the line ``Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.5f, Ground);``, the OverlapCircle takes in three arguments:
