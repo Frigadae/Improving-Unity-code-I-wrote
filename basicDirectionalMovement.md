@@ -1,6 +1,6 @@
-#Basic Directional Code for Unity
+# Basic Directional Code for Unity
 
-###First Iteration
+### First Iteration
 My first movescript script had two implementations of the code.
 The first implementation being expressed as such:
 ```cs
@@ -44,7 +44,7 @@ However I kept it as I want to ensure that the gameObject does not travel into i
 This is well and good and it does indeed move the gameObject that the script is attached to. However using a list of ``else if``s statements means only one of them will be true.
 This means that there is no diagonal movement at all. You can go north, south, east, west but not northwest, southeast as such.
 
-###Second Iteration
+### Second Iteration
 My next iteration of the basic directional code involves removing the ``else if``s in favour of ``if`` statements. 
 With a list ``if`` statements, one or multiple can be recognised as true instead of only a single one.
 
