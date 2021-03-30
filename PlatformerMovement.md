@@ -72,7 +72,7 @@ Acknowledging the flaws of my implementation did begin right away, while a simpl
 It does have a flaw that while I did not test did convince me to look into raycasting or colliders.
 
 
-Suppose the player is on a moving platform. A vertical moving platform could potentiallyu disable the ability to jump. 
+Suppose the player is on a moving platform. A vertical moving platform could potentially disable the ability to jump. 
 I should stress that while this problem is unverified as I did not test it out. It could be possible, as a moving platform would push the player around and thus the velocity is never really set to 0. If it is possible, then the game experience would be ruined.
 
 And so enter [this video about implementing a simple platformer game](https://www.youtube.com/watch?v=1bHVsxw_o7o)
