@@ -47,3 +47,5 @@ if (!Input.anyKey)
 A comfort feature I implemented includes sprite flipping if I were to go left or right. 
 I initialised a variable called ``private SpriteRenderer playableSprite;`` and fetched the sprite properties of the gameObject on ``Start()``.
 By flipping the script through a simple conditional check, I can point my sprite towards the direction I wish to go.
+
+This code snippet is to be inserted into the script's ``FixedUpdate()`` function
