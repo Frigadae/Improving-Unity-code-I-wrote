@@ -72,8 +72,8 @@ Acknowledging the flaws of my implementation did begin right away, while a simpl
 It does have a flaw that while I did not test did convince me to look into raycasting or colliders.
 
 
-Suppose the player is on a moving platform, a horizontal one would be no problem. However a vertical moving platform would disable the ability to jump. 
-While this is a problem that is not verified as I did not test it out, it is possible, as a moving platform would push the player around and thus the velocity is never really set to 0.
+Suppose the player is on a moving platform. A vertical moving platform could potentiallyu disable the ability to jump. 
+I should stress that while this problem is unverified as I did not test it out. It could be possible, as a moving platform would push the player around and thus the velocity is never really set to 0. If it is possible, then the game experience would be ruined.
 
 And so enter [this video about implementing a simple platformer game](https://www.youtube.com/watch?v=1bHVsxw_o7o)
 
@@ -135,7 +135,7 @@ public class NewPlatformerScript : MonoBehaviour
     }
 }
 ```
-With some simplifying, such as deleting a function call/. I was able to achieve the desired platformer behaviour by implementing a collider check using a cirlce overlap.
+With some simplifying, such as deleting a function call. I was able to achieve the desired platformer behaviour by implementing a collider check using a cirlce overlap.
 The circle overlap checks for a layer named "Ground" which represents the platforms the player can stand on.
 
 Reading the line ``Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.5f, Ground);``, the OverlapCircle takes in three arguments:
