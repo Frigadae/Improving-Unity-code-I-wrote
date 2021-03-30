@@ -76,7 +76,8 @@ public class myFirstScript : MonoBehaviour
         {
             transform.Translate(0, 0, 0);
         }
-    }```
+    }
+```
 With this, I am able to now move diagonally. My first script on Unity is now done.
 This implementation however is not perfect. Upon adding objects with collisions, if I press my gameObject against another gameObject with collisions enabled, it bounces around.
 A more detailed description would be oscillating or shaking around when I press against it. 
