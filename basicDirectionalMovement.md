@@ -81,7 +81,10 @@ public class myFirstScript : MonoBehaviour
 With this, I am able to now move diagonally. My first script on Unity is now done.
 This implementation however is not perfect. Upon adding objects with collisions, if I press my gameObject against another gameObject with collisions enabled, it bounces around.
 A more detailed description would be oscillating or shaking around when I press against it. 
-The gameObject I am controlling briefly sinks into the other object, then bounces back out before pressing back in. This is not an ideal behaviour.
-While some minor changes to the code such as replacing ``Update()`` with ``FixedUpdate()`` helped reduce the shaking, it only minimises it if I were to translate at a very high speed.
 
-Thus, my next iteration involves using RigidBody2D.
+
+The gameObject I am controlling briefly sinks into the other object, then bounces back out before pressing back in. This is not an ideal behaviour.
+While some minor changes to the code such as replacing ``Update()`` with ``FixedUpdate()`` helped reduce the shaking, it only minimises it if I were to translate at a very high speed. The shaking is only made non-existent if I set the speed to an extremely low value, such as ``0.1f``. 
+A behaviour I noted if I set the speed to a very high value, such as 100 or greater. The object would pass through another object completely.
+
+Thus, my next iteration involves using RigidBody2D, which implements some physics into the game objects.
