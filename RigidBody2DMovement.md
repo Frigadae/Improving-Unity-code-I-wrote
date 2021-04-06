@@ -48,4 +48,42 @@ A comfort feature I implemented includes sprite flipping if I were to go left or
 I initialised a variable called ``private SpriteRenderer playableSprite;`` and fetched the sprite properties of the gameObject on ``Start()``.
 By flipping the script through a simple conditional check, I can point my sprite towards the direction I wish to go.
 
-This code snippet is to be inserted into the script's ``FixedUpdate()`` function
+This code snippet is to be inserted into the script's ``FixedUpdate()`` function. When putting it together, it should appear as this:
+
+```cs
+public class myFirstScript : MonoBehaviour 
+{
+  public float speed;
+  private Rigidbody2D playableObject;
+  private SpriteRenderer playableSprite;
+
+  // Start is called before the first frame update
+  void Start()
+  {
+    playableSprite = GetComponent<SpriteRenderer>();
+    playableObject = GetComponent<Rigidbody2D>();
+  }
+
+  // Update is called once per frame
+  void FixedUpdate()
+  {
+    float xCoord = Input.GetAxis("Horizontal");
+    float yCoord = Input.GetAxis("Vertical");
+
+    playableObject.velocity = new Vector2(xCoord * speed, yCoord * speed) * Time.deltaTime;
+    
+    if (Input.GetKey("left") || Input.GetKey("a"))
+    {
+      playableSprite.flipX = false;
+    }
+      if (Input.GetKey("right") || Input.GetKey("d"))
+    {
+      playableSprite.flipX = true;
+    }
+    if (!Input.anyKey)
+    {
+      playableObject.velocity = Vector2.zero;
+    }
+  }
+}
+```
