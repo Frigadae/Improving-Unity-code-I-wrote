@@ -5,3 +5,4 @@ This repository is intended to document my progress tinkering with the Unity Eng
 Be aware that some the code I used are copied from Youtube tutorials (with and without modification of my own). 
 Others I formed my own ideas from reading the Unity Scripting documentation.
 
+This repo is on hiatus at the moment while I try to sort out some other projects I need to do.
